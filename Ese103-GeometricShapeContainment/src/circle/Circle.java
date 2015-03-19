@@ -1,5 +1,7 @@
 package circle;
 
+import triangle.*;
+
 public class Circle {
 	
 	private double xC;
@@ -41,6 +43,14 @@ public class Circle {
 		boolean contain = false;
 		if(this.getXMin() <= c.getXMin() && this.getYMin() <= c.getYMin())
 		if(this.getXMax() >= c.getXMax() && this.getYMax() >= c.getYMax())
+				contain = true;
+		return contain;	
+	}
+	public boolean contains(Triangle t)
+	{
+		boolean contain = false;
+		if(this.getXMin() <= t.getXMin() && this.getYMin() <= t.getYMin())
+			if(this.getXMax() >= t.getXMax() && this.getYMax() >= t.getYMax())
 				contain = true;
 		return contain;	
 	}
