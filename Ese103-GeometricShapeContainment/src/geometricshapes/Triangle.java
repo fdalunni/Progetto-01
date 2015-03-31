@@ -1,8 +1,6 @@
-package triangle;
+package geometricshapes;
 
-import circle.*;
-
-public class Triangle {
+public class Triangle extends GeometricShape{
 	private double xV;
 	private double yV;
 	private double l;
@@ -105,22 +103,4 @@ public class Triangle {
 			return false;
 		return true;
 	}
-	 public boolean contains (Triangle t)
-		{
-			boolean contain = false;
-			if(this.getXMin() <= t.getXMin() && this.getYMin() <= t.getYMin())
-				if(this.getXMax() >= t.getXMax() && this.getYMax() >= t.getYMax())
-					contain = true;
-			return contain;	
-		}
-	 
-	 public boolean contains(Circle c)
-		{
-			boolean contain = false;
-			if(this.getXMin() <= c.getXMin() && this.getYMin() <= c.getYMin())
-				if(this.getXMax() >= c.getXMax() && this.getYMax() >= c.getYMax())
-					contain = true;
-			return contain;	
-		}
-
 }
